@@ -1,0 +1,57 @@
+body{
+    background-image: url(../../../../globalAssets/redstoneOre.png);
+}
+header {
+    margin: 0 1vw 0 1vw;
+    padding: 0.1vw;
+    background-color: rgba(168, 143, 166, 50%);
+    text-align: center;
+}
+main{
+    text-align: justify;
+    margin-top: 0.2vw;
+    background-color: white;
+}
+main img{
+    width: 30%;
+    display: inline-block;
+    margin: 5px 0 0 5px;
+}
+main div.texto{
+    width: 69%;
+    display: inline-block;
+    text-align: justify;
+}
+main h1{
+    text-align: center;
+}
+main .tabela{
+    display: inline-block;
+    width: 25%;
+    margin-left: 10px;
+    margin-top: 0.5vw;
+}
+main div#tabelaOR, main div#tabelaAND, main div#tabelaXOR{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+main div#tabelaOR>div, main div#tabelaAND>div, main div#tabelaXOR>div{
+    border: 1px solid black;
+    text-align: center;
+}
+main div#tabelaOR>:nth-child(2), main div#tabelaOR>:nth-child(3), main div#tabelaOR>:nth-child(4), main div#tabelaOR>:nth-child(7),
+main div#tabelaAND>:nth-child(2), main div#tabelaAND>:nth-child(3), main div#tabelaAND>:nth-child(4), main div#tabelaAND>:nth-child(7),
+main div#tabelaXOR>:nth-child(2), main div#tabelaXOR>:nth-child(3), main div#tabelaXOR>:nth-child(4), main div#tabelaXOR>:nth-child(7){
+    background-color: blue;
+} 
+main div#tabelaOR>:first-child, main div#tabelaAND>:first-child, main div#tabelaXOR>:first-child{
+    background-color: black;
+}
+main iframe{ 
+    width: 60%;
+    height: 33vw;
+    margin: 0.5vw auto 0 20%;
+    border: 10px solid red;
+    
+}

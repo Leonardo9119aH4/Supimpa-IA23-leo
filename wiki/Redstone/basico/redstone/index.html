@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen" href="content.css">
+        <link rel="stylesheet" media="screen" href="../../../../globalAssets/main.css">
+        <script defer src="../../../../globalAssets/main.js"></script>
+        <title>Fundamentos da redstone</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                   <img src="../../../../globalAssets/3risk.PNG">
+                    <ul>
+                        <li><a href="../../../../index.html">Página principal</a></li>
+                        <li><button onclick="SiteAleatorio()">Página aleatória</button></li>
+                        <li><a href="#">Conheça a gente</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="espacador"></div>
+        <header>
+            <div class="titulo">O básico sobre a Redstone</div>
+            <p class="subtitulo">Aqui você vai aprender como usar a Redstone!</p>
+        </header>
+        <main>
+            <div class="extra">
+                <img src="../../../../globalAssets/redstone.png">
+                <li>ID nome item (ambas): redstone</li>
+                <li>ID numérico item (bedrock): 373</li>
+                <li>ID nome bloco (ambas): redstone_wire</li>
+                <li>ID numérico block (bedrock): 55</li>
+            </div>
+            <div class="texto1">
+            <p>A Redstone é um dos itens mais poderosos do jogo, com ela é possível fazer vários circuitos que vão desde portas automáticas e
+            vão até FAZER UM COMPUTADOR DE REDSTONE NO MINECRAFT.</p>
+            <p>Primeiramente, a redstone é achada da altura (Y) -63 ao 15, podendo ser coletada com picareta de ferro ou superior. Ao ser
+                coletada, pode ser colocada no chão, podendo subir um bloco por vez.
+            </p>
+            </div>
+            <div class="texto2">
+                <img src="redstones.png" id="redstones">
+                <div class="textoInterno">
+                    <div class="topico">A Redstone</div>
+                    <p class="textoLadoImg">Após posicionada, a redstone pode ser energizada por uma alavanca, botão, tocha de redstone, repetidor, 
+                    comparador etc, quando energizada, pode conduzir a energia até 15 blocos (carga máxima 15), perdendo 1 de força a cada bloco.
+                    </p>
+                    <p>A alavanca pode ser ligada e desligada, os botões de madeira quando apertados são ligados por 1,5seg e são desligados logo em seguida,
+                    podendo ser acionado pelo jogador, por flechas ou tridentes, já o botão de pedra é ligado por 1seg e só pode ser acionado pelo jogador.
+                    </p>
+                    <p>A placa de pressão de madeira quando pisada pelo jogador ou por um mob ou quando tem um item em cima, é ligada, já a placa de
+                    pedra só é acionada pelo jogador ou por mobs. A placa de pressão de ferro e ouro funcionam como uma "balança", quanto mais
+                    mobs ou itens em cima delas, maior será a força do sinal. Na placa de ouro, cada entidade (mob) aumenta em 1 o sinal de restone, ja na placa 
+                    de ferro, é nescessário 10 entidades para aumentar em 1 o sinal.
+                    </p>
+                </div>
+                <p>
+                    Outra forma de ligar é por meio dos ganchos e linhas, colocando 2 ganchos alinhados e colocando linhas entre eles, quando algum mob passar 
+                    nas linhas, o bloco dos ganchos é energizado, podendo ser possível ligar redstone a partir dele.
+                </p>
+                </div>
+                <div class="imagens">
+                    <img src="../../localAssets/repetidores.png" id="repetidores">
+                    <img src="../../localAssets/comparador.png" id="comparador">
+                    <img src="../../localAssets/sculks.png" id="sculks">
+                </div>
+                <div class="texto3">
+                <div class="topico">Repetidores e tochas de redstone</div>
+                <p>Um repetidor é o item que permite continuar a transmitir o sinal de redstone após os 15 blocos, posicionando a frente da redstone conforme
+                    a imagem ao lado, o repetidor repetirá com demora de 1 tick (1/20seg) o sinal com força total, podendo colocar até 4 ticks de delay. Ao mirar em um bloco, o mesmo será energizado fortemente, sendo assim ao
+                    colocar qualquer redstone ao lado do bloco, a redstone será energizada, se uma redstone for mirada no bloco, este será fracamente energizado,
+                    sendo possível captar seu sinal apenas com repetidores. O bloco de redstone é o bloco que sempre está energizado.
+                </p>
+                <p>Ao colocar um repetidor na lateral de outro e ligar, o um vai ficar travado, assim independente do sinal que estiver na entrada, ele vai continuar com
+                    o mesmo sinal de antes.
+                </p>
+                <p>
+                    A tocha de redstone pode ser posicionado no chão ou na parede, qualquer redstone ao lado ou em baixo da tocha será energizada, o bloco sobre
+                    a tocha também será energizado fortemente. Se o bloco o qual a tocha está posicionada for energizado, a tocha apagará. 
+                </p>
+                <p class="topico">Comparadores</p>
+                <p>
+                    O comparador de redstone tem função primária de comparar 2 cargas, ligando uma redstone da entrada (trás) do comparador e outra na lateral,
+                    e mais uma como saída, se a carga da trás for maior que a da lateral, a carga se mantém, se não, a carga não passa.
+                </p>
+                <p>
+                    Ao clicar no comparador, trocará para o modo secundário, que é a subtração de cargas, será subtraído a carga da entrada menos a carga da lateral, o resultado é a força
+                    na saída, se a carga lateral for maior ou igual a entrada, a saída não terá carga.
+                </p>
+                <p>
+                    Por fim, se colocado um bloco interativo como baú por exemplo, quanto mais cheio estiver o bloco, maior será a carga emitida pelo comparador.
+                </p>
+                <p class="topico">Observadores e sensor Sculk</p>
+                <p>
+                    Um dos blocos mais úteis é o observador, tem 2 lados, um com uma "carinha" e outro com um círculo vermelho, quando a "carinha" detecta uma alteração
+                    no bloco em que está olhando, emite um pulso de redstone. Nos primórdios do Minecraft, antes da existência do observador, era usado o BUD Switch,
+                    consistia em um bug usando <a href="../pistoes/index.html">pistões</a> de slime, deixando-o estendido sem nenhum sinal de redstone, quando acontecia uma alteração ao lado dele,
+                    ele retraia, essa técninca foi muito usada antes do observador.
+                </p>
+                <p>
+                    O sensor Sculk é um bloco achado nas cidades ancestrais, ao ser usado com redstone, o sensor detecta qualquer som em um raio de 9 blocos, sendo a 
+                    intensidade do sinal inversamente proporcional à distância do som. Ao colocar um comparador, dependendo do tipo de som (intensidade), maior será o sinal.
+                </p>
+                <p>
+                    Na versão 1.20, foi adicionado o sensor Sculk calibrado, funciona de forma semelhante ao sensor Sculk, com a diferença que detecta somente o tipo de som, 
+                    não importando a distância que o som aconteceu, desde que esteja no raio de alcance.
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <li class="tituloFooter">Contato</li>
+                <ul>
+                    <li>Email: WindowsNo@LinuxYes.kernel</li>
+                    <li>Telefone: +55 47 91111-6969</li>
+                    <li><a href="#">Central de suporte</a></li>
+                </ul>
+            </div>
+            <div>
+                <li class="tituloFooter">Informações</li>
+                <ul>   
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                </ul><ul>
+                    <li><a href="#">Conheça a gente</a></li>
+                    <li><a href="#">Trabalhe conosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <li class="tituloFooter">Mais sites</li>
+                <ul>  
+                    <li><a href="https://ifc.edu.br/">IFC Reitoria</a></li>
+                    <li><a href="http://www.camboriu.ifc.edu.br/">IFC Camboriú</a></li>
+                    <li><a href=#>Mini Wiki</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

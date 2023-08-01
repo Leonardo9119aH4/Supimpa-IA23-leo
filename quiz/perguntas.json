@@ -1,0 +1,20 @@
+{
+    "pergunta" : "Você perdeu! Clique qualquer botão abaixo para recomeçar",
+    "respCerta" : null,
+    "btr1" : "RECOMEÇAR",
+    "btr2" : "RECOMEÇAR",
+    "btr3" : "RECOMEÇAR",
+    "btr4" : "RECOMEÇAR",
+    "btr5" : "RECOMEÇAR",
+    "btr6" : "RECOMEÇAR"
+}
+{
+    "pergunta" : "teste, certa 1",
+    "respCerta" : 1,
+    "btr1" : ".",
+    "btr2" : ".",
+    "btr3" : ".",
+    "btr4" : ".",
+    "btr5" : ".",
+    "btr6" : "."
+}

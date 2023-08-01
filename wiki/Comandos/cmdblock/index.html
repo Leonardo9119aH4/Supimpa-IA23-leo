@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen" href="content.css">
+        <link rel="stylesheet" media="screen" href="../../../globalAssets/main.css">
+        <script defer async src="../../../globalAssets/main.js"></script>
+        <title>Blocos de comando</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                   <img src="../../../globalAssets/3risk.PNG">
+                    <ul>
+                        <li><a href="../../../index.html">Página principal</a></li>
+                        <li><button onclick="SiteAleatorio()">Página aleatória</button></li>
+                        <li><a href="#">Conheça a gente</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="espacador"></div>
+        <header>
+            <h1>Blocos de comando</h1>
+            <h2>O bloco mais poderoso do jogo, programando no Minecraft</h2>
+        </header>
+        <main>
+            <div id="imagens">
+                <img src="../localAssets/command_block.jpg">
+                <img src="../localAssets/blocos.png">
+            </div>
+            <div class="texto">
+                <h1>Blocos de comando</h1>
+                <p>
+                    O bloco de comando é o bloco que permite salvar e executar comandos, ao clicar nele, abre uma tela para inserção de comandos (os mesmos do chat),
+                    ao receber um sinal de redstone, o comando é executado. Não é possível usa-lo no modo sobrevivência, sendo de uso exclusivo do modo criativo, e não
+                    está disponivel no inventário do modo criativo, sendo preciso o uso do comando "/give @p command_block" (sem aspas) para obte-lo.
+                </p>
+                <p>
+                    A sintaxe dos comandos é igual a do chat, mas não sendo nescessário o "/",  tem a vantagem de caber linhas de comandos bem maiores do que no chat, e
+                     tem uma "seta" que serve para indicar a direção de execução dos blocos de comandos, por fim, o bloco de comando tem 3 opções de execução:
+                </p>
+                <p>
+                    Primeiro, pode se escolher o modo de execução, se é Impulso, Cadeia e Repetição, no modo Impulso, ao receber o sinal de redstone, o comando é
+                    executado. No modo Repetição, o comando é executado toda vez a cada tick enquanto a redstone estiver energizando o bloco. O modo cadeia falamos por último.
+                </p>
+                <p>
+                    Segundo, pode escolher se é condicional ou incondicional. No incondicional, o comando sempre é executado. No condicional, o comando so é executado apenas se
+                    o bloco de comando anterior (com seta apontada para ele) foi executado.
+                </p>
+                <p>
+                    Por fim, a última opção é sobre requer redstone ou não, no 'Requer redstone', o comando só é executado com sinal de redstone, no 'sempre ativo', o comando é
+                    sempre executado indepedente se tem redstone ou não.
+                </p>
+                <p>
+                    O modo cadeia é usado para execução de vários blocos de comandos simultaneamente, funciona melhor deixando em 'sempre ativo' e 'condicional', coloca-se um
+                    primeiro bloco de comando em 'Impulso' ou em 'Repetição', os próximos blocos são colocados na direção da seta, no modo 'cadeia', com a execução do primeiro
+                    bloco de comando, todos os blocos em 'cadeia' serão executados.
+                </p>
+                <p>
+                    É possível ver qual foi o último comando executado, e em caso de falha de execução do comando, qual foi o erro cometido, isso pelos botões O/X.
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <li class="tituloFooter">Contato</li>
+                <ul>
+                    <li>Email: WindowsNo@LinuxYes.kernel</li>
+                    <li>Telefone: +55 47 91111-6969</li>
+                    <li><a href="#">Central de suporte</a></li>
+                </ul>
+            </div>
+            <div>
+                <li class="tituloFooter">Informações</li>
+                <ul>   
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                </ul><ul>
+                    <li><a href="#">Conheça a gente</a></li>
+                    <li><a href="#">Trabalhe conosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <li class="tituloFooter">Mais sites</li>
+                <ul>  
+                    <li><a href="https://ifc.edu.br/">IFC Reitoria</a></li>
+                    <li><a href="http://www.camboriu.ifc.edu.br/">IFC Camboriú</a></li>
+                    <li><a href=#>Mini Wiki</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

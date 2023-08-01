@@ -1,0 +1,29 @@
+body{
+    background-image: url(../../../../globalAssets/redstoneOre.png);
+}
+header {
+    margin: 0 1vw 0 1vw;
+    padding: 0.1vw;
+    background-color: rgba(168, 143, 166, 50%);
+    text-align: center;
+}
+main {
+    margin-top: 0.5vw;
+    background-color: white;
+    text-align: justify;
+}
+main h1{
+    text-align: center;
+}
+main img{
+    width: 100%;
+}
+main div.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 0.5vw;
+    margin: auto 0.5vw auto 0.5vw;
+}
+main div#esp{
+    height: 0.5vw;
+}

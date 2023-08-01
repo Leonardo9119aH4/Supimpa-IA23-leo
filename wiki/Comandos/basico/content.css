@@ -1,0 +1,22 @@
+body{
+    background-image: url(../../../globalAssets/cmdblock.jpg);
+}
+header{
+    text-align: center;
+    background-color: rgba(65, 65, 65, 0.5);
+    margin: 0 1vw 0 1vw;
+}
+main{
+    text-align: justify;
+    background-color: white;
+    margin: 0 0.5vw 0 0.5vw;
+}
+main h1{
+    text-align: center;
+}
+main img{
+    width: 100%;
+}
+main div.texto{
+    margin: 0 0.5vw 0 0.5vw;
+}

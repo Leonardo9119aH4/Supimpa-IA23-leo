@@ -1,0 +1,37 @@
+body{
+    background-image: url(../../localAssets/pistao.jpeg);
+}
+header{
+    text-align: center;
+    background-color: rgba(95, 80, 80, 0.4);
+    padding: 2vw;
+}
+main{
+    margin-top: 2vw;
+    background-color: rgb(71, 100, 125);
+    text-align: justify;
+}
+main div#imagens{
+    width: 30%;
+    display: inline-block;
+    margin: 1vw auto auto 1vw;
+}
+main img{
+    width: 100%;
+}
+main div#t1, div#t2, div#t3{
+    width: 67%;
+    display: inline-block;
+}
+.topico{
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+    margin-left: 37%;
+}
+#tpf{
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+    margin-left: 44%;
+}

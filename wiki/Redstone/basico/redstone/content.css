@@ -1,0 +1,57 @@
+body {
+    background-image: url(../../../../globalAssets/redstoneOre.png);
+}
+header {
+    margin: 0 1vw 0 1vw;
+    padding: 0.1vw;
+    background-color: rgba(168, 143, 166, 50%);
+}
+main {
+    margin: 0.5vw 1vw 0 0.5vw;
+    background-color: white;
+    padding: 0.5vw;
+    text-align: justify;
+}
+main div.extra {
+    display: inline-block;
+    width: 17%;
+    float: right;
+    background-color: lightgray;
+    list-style: none;
+}
+main div.extra>li{
+    margin-left: 10px;
+}
+main div.extra img{
+    width: 97%;
+    margin-left: 5px;
+}
+main div.texto1, main div.texto2 {
+    display: inline-block;
+    width: 82%;
+}
+img#redstones{
+    width: 30%;
+    display: inline-block;
+}
+main div.texto2 div.textoInterno{
+    width: 69%;
+    display: inline-block;
+}
+.topico{
+    text-align: center;
+    font-size: 2rem;
+}
+main div.texto3{
+    display: inline-block;
+    width: 69%;
+}
+div.imagens{
+    width: 30%;
+    float: right;
+    display: inline-block;
+}
+img#repetidores, img#comparador, img#sculks{
+    width: 100%;
+    display: inline;
+}

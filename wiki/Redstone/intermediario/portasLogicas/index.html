@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen" href="content.css">
+        <link rel="stylesheet" media="screen" href="../../../../globalAssets/main.css">
+        <script src="../../../../globalAssets/main.js"></script>
+        <title>Porta lógicas</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                   <img src="../../../../globalAssets/3risk.PNG">
+                    <ul>
+                        <li><a href="../../../../index.html">Página principal</a></li>
+                        <li><button onclick="SiteAleatorio()">Página aleatória</button></li>
+                        <li><a href="#">Conheça a gente</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="espacador"></div>
+        <header>
+            <h1>Portas lógicas de redstone</h1>
+            <h2>Veja como funcionam as portas lógicas e como faze-las no Minecraft</h2>
+        </header>
+        <main>
+            <img src="../../localAssets/gates.png" id="gates">
+            <div class="texto">
+                <h1>NOT, AND, OR e XOR</h1>
+                <div>
+                    No minecraft, assim como na computação, tem as portas lógicas, sendo possível faze-las com redstone, considerando a redstone somente com 2
+                    estados: ligados (V) e desligados (F), é possível fazer operações booleanas com 2 redstones. É por meio dessas portas que foi possível construir um 
+                    COMPUTADOR de REDSTONE no MINECRAFT. A porta NOT (NÃO) inverte o estado, ligado vira desligado e vice-versa. Já as portas OR (OU), AND (E) e XOR 
+                    (OU exclusivo) precisam seguir a tabela verdade. As células azuis são as entradas, e as brancas a saída, observe abaixo as tabelas OR, AND e XOR respectivamente.
+                </div>
+                <div class="tabela"><div id="tabelaOR">
+                    <div></div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>V</div>
+                    <div>V</div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>V</div>
+                    <div>F</div>
+                </div></div>
+               <div class="tabela"><div id="tabelaAND">
+                    <div></div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>V</div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>F</div>
+                    <div>F</div>
+                    <div>F</div>
+                </div></div>
+                <div class="tabela"><div id="tabelaXOR">
+                    <div></div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>V</div>
+                    <div>F</div>
+                    <div>V</div>
+                    <div>F</div>
+                </div></div>
+                <div>
+                    Veja o vídeo abaixo de como construir essas portas no Minecraft:
+                </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QqMA4JzT2mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </main>
+        <footer>
+            <div>
+                <li class="tituloFooter">Contato</li>
+                <ul>
+                    <li>Email: WindowsNo@LinuxYes.kernel</li>
+                    <li>Telefone: +55 47 91111-6969</li>
+                    <li><a href="#">Central de suporte</a></li>
+                </ul>
+            </div>
+            <div>
+                <li class="tituloFooter">Informações</li>
+                <ul>   
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                </ul><ul>
+                    <li><a href="#">Conheça a gente</a></li>
+                    <li><a href="#">Trabalhe conosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <li class="tituloFooter">Mais sites</li>
+                <ul>  
+                    <li><a href="https://ifc.edu.br/">IFC Reitoria</a></li>
+                    <li><a href="http://www.camboriu.ifc.edu.br/">IFC Camboriú</a></li>
+                    <li><a href=#>Mini Wiki</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

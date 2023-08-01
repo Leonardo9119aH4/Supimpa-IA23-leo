@@ -1,0 +1,15 @@
+main{
+    text-align: center;
+}
+main div#pergunta{
+    font-size: 2rem;
+}
+main div#respostas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1vw;
+}
+main div#respostas button{
+    height: 2.5rem;
+}
