@@ -1,0 +1,52 @@
+[
+  {
+    "pergunta": "Até quantos blocos a redstone pode conduzir?",
+    "alternativas": [1,2,3,4,7,9,15,17,19,"Ilimitado"],
+    "resposta": 6
+  },
+  {
+    "pergunta": "Até quantos blocos o pistão é capaz de empurrar?",
+    "alternativas": [1,2,3,4,5,6,8,10,11,15],
+    "resposta": 8
+  },
+  {
+    "pergunta": "Para que serve o comando /give no minecraft?",
+    "alternativas": ["Receber um item","Colocar um bloco", "Invocar um mob", "Adicionar um evento", "Desistir", "Dropar um item", "Instalar minecraft", "Instalar mods","Instalar OIETIF.bat","NDA"],
+    "resposta": 0
+  },
+  {
+    "pergunta": "Em que ano a Mojang foi comprada pela Microsoft?", 
+    "alternativas": ["3000 a.C.", 1995, 1998, 2000, "XP", 2007, 2010, 2014, 2016, 2018],
+    "resposta": 7
+  },
+  {
+    "pergunta": "Qual é o servidor mais jogado do minecraft?", 
+    "alternativas": ["Mineplex", "Lifeboat", "Hypixel", "Craftlandia", "Sky minigames", "Armageddon", "WynnCraft", "InPVP", "Ubuntu", "2P2T"],
+    "resposta": 2
+  },
+  {
+    "pergunta": "Qual comando é usado para preencher grandes volumes de bloco?", 
+    "alternativas": ["/give", "/setblock", "/setblocks", "//set", "/summon", "/fill", "Debug.Fill()", "format C:", "sudo rmdir /", "NDA"],
+    "resposta": 5
+  },
+  {
+    "pergunta": "Em qual linguagem de programação o Minecraft Bedrock Edition foi criado?", 
+    "alternativas": ["Java", "Assembly", "Brainfuck", "C#", "HTML e CSS", "Javascript", "Bash", "Linguagem própria", "Lua", "C++"],
+    "resposta": 9
+  },
+  {
+    "pergunta": "Qual Sistema Operacional abaixo não existe?", 
+    "alternativas": ["Windows Vista", "Windows 9", "Ubuntu", "Peppermint", "FreeBSD", "MacOS Monterey", "Lubuntu", "86-DOS", "Uwuntu", "Windows 3.1"],
+    "resposta": 1
+  },
+  {
+    "pergunta": "É uma das funções do comparador de redstone:", 
+    "alternativas": ["Repetir o sinal", "Executar comandos", "Comparar 2 mobs", "Comparar 2 cargas", "Comparar 2 blocos", "Somar cargas", "Ativar a bluestone", "Crashar o jogo", "Corromper a BIOS do seu PC", "NDA"],
+    "resposta": 3
+  },
+  {
+    "pergunta": "Dado que f(x)=ax²+3x-1 e que f(3)=-1, qual valor de a?", 
+    "alternativas": ["NaN", "-7", "-1", "71", "16", "-3", "6", "-11", "null", "(9a+2)/y"],
+    "resposta": 2
+  }
+]
