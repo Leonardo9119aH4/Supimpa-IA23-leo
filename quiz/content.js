@@ -1,46 +1,113 @@
-const elQuiz = document.querySelector(".quiz")
-const elPergunta = elQuiz.querySelector(".pergunta")
-const elAlt = elQuiz.querySelector(".alternativas")
-const elAcertos = elQuiz.querySelector("#acertos")
-const elErros = elQuiz.querySelector("#erros")
+//import { SiteAleatorio } from "../globalAssets/main.js"
+
+const elQuiz = document.querySelector("#quiz")
+const elPergunta = elQuiz.querySelector("#pergunta")
+const elRP = elPergunta.querySelector("#R") //seleciona uma div resposta na pergunta
+const elNP = elQuiz.querySelector("#NP")
+const elAlt = elQuiz.querySelector("#alternativas")
+const elEr = elQuiz.querySelector("#totalErros") //erros ou tentativas
+const elPo = elQuiz.querySelector("#pontos")
+const elHard = elQuiz.querySelector("#botao input")
 
 async function main() {
   const request = await fetch("quiz.json")
   const quiz = await request.json()
-  let nPerg = 0
-  let Erros = 0
-  let Acertos = 0
-  let Pontos = 0
 
-  function Perguntar(nPerguntas) {
-    elPergunta.innerHTML = quiz[nPerguntas].pergunta
-    elAlt.innerHTML = ""
-    quiz[nPerguntas].alternativas.forEach(alt => elAlt.innerHTML += `<button>${alt}</button>`)
+  let nP = 0 //número da pergunta
+  let T_Er = 0 //total de erros (modo fácil)
+  let Er = 1 //usado para calcular a pontuação (modo fácil)
+  let Po = 0 //pontuação (modo fácil)
+  let Tent = 0 //tentativas (modo difícil)
+
+  function Reset(){
+    nP = 0
+    T_Er = 0
+    Er = 1
+    Po = 0
+  }
+  function Perguntar(nPe) {
+    if(nP < quiz.length){
+      elPergunta.innerHTML = quiz[nPe].pergunta
+      elAlt.innerHTML = ""
+      for (let i = 0; i < quiz[nPe].alternativas.length; i++) {
+        elAlt.innerHTML += `<button>${quiz[nPe].alternativas[i]}</button>`
+      }
+      document.documentElement.style.setProperty("--Col", Math.ceil(quiz[nPe].alternativas.length/3))
+      elNP.innerHTML = nPe + 1
+    }
+    else{
+      Reset()
+      Tent = 0
+    }
   }
 
   elAlt.addEventListener("click", ev => {
     const AltC = ev.target;
     const aAlt = [...elAlt.children]
     const nAltC = aAlt.indexOf(AltC)
-    if(nPerg > quiz.length){
-        if (nAltC == quiz[nPerg].resposta) {
-            Perguntar(++nPerg)
-            Acertos++
-            return
-          }
-          Erros++
-          if(elHard.checked){
-              nPerg = 0
-          }
-          return
+    if (nAltC == quiz[nP].resposta) {
+      Perguntar(++nP)
+      if(!elHard.checked){
+        Po += 1/Er
+        Er = 1
+      }
+      if(elHard.checked){
+        Po++
+      }
     }
-    elAcertos.innerHTML = "Acertos: " + Acertos
-    elErros.innerHTML = "Erros: " + Erros
-    nPerg = 0
-    Erros = 0
-    Acertos = 0
-    Perguntar(nPerg)
+    else{
+      T_Er++
+      if(!elHard.checked){
+        Er++
+      }
+      if(elHard.checked){
+        Reset()
+        Tent++
+      }
+    }
+    if(!elHard.checked){
+      elEr.innerHTML = "Erros: " + T_Er
+    }
+    if(elHard.checked){
+      elEr.innerHTML = "Tentativas: " + Tent
+    }
+    elPo.innerHTML = "Pontuação: " + Po
+    Perguntar(nP)
   })
-}
+  elNP.addEventListener("click", pev => {
+    if(quiz[nP].resposta == "NP"){
+      Perguntar(++nP)
+      if(!elHard.checked){
+        Po += 1/Er
+        Er = 1
+      }
+      if(elHard.checked){
+        Po++
+      }
+    }
+    else{
+      T_Er++
+      if(!elHard.checked){
+        Er++
+      }
+      if(elHard.checked){
+        Reset()
+        Tent++
+      }
+    }
+    if(!elHard.checked){
+      elEr.innerHTML = "Erros: " + T_Er
+    }
+    if(elHard.checked){
+      elEr.innerHTML = "Tentativas: " + Tent
+    }
+    elPo.innerHTML = "Pontuação: " + Po
+    Perguntar(nP)
+  })
 
+  //colocar o elRP
+  //colocar RESET
+
+  Perguntar(0)
+}
 main()
