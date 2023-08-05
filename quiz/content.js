@@ -1,84 +1,46 @@
-let RespostaUsuario = null
-let RespostaCerta = null
-let Pergunta = document.querySelector("main div#pergunta")
-let Contador = document.querySelector("main #contador")
-let Seletor = 0
-let Vidas = 0
-let BTR1 = document.querySelector("main #bt1")
-let BTR2 = document.querySelector("main #bt2")
-let BTR3 = document.querySelector("main #bt3")
-let BTR4 = document.querySelector("main #bt4")
-let BTR5 = document.querySelector("main #bt5")
-let BTR6 = document.querySelector("main #bt6")
-const request = await
-fetch("perguntas.json")
-const dados = await request.json()
+const elQuiz = document.querySelector(".quiz")
+const elPergunta = elQuiz.querySelector(".pergunta")
+const elAlt = elQuiz.querySelector(".alternativas")
+const elAcertos = elQuiz.querySelector("#acertos")
+const elErros = elQuiz.querySelector("#erros")
 
-function Reset(){
-    Seletor = 1
-    Vidas = 3
-}
-function Default(){
-    Seletor = 0
-    Perguntar()
-    RespostaCerta = null
-    RespostaUsuario = null
-}
-function Comparar(){
-    if(Seletor>0){
-        if(RespostaCerta==RespostaUsuario){
-            Seletor++
-            RespostaUsuario = null
-            Perguntar()
-        }
-        else{
-            if(Vidas<=0){
-                Default()
-                }
-            else{
-                Vidas--
-                }
-            }
-        }
-    else{
-        Reset()
-        Perguntar()
+async function main() {
+  const request = await fetch("quiz.json")
+  const quiz = await request.json()
+  let nPerg = 0
+  let Erros = 0
+  let Acertos = 0
+  let Pontos = 0
+
+  function Perguntar(nPerguntas) {
+    elPergunta.innerHTML = quiz[nPerguntas].pergunta
+    elAlt.innerHTML = ""
+    quiz[nPerguntas].alternativas.forEach(alt => elAlt.innerHTML += `<button>${alt}</button>`)
+  }
+
+  elAlt.addEventListener("click", ev => {
+    const AltC = ev.target;
+    const aAlt = [...elAlt.children]
+    const nAltC = aAlt.indexOf(AltC)
+    if(nPerg > quiz.length){
+        if (nAltC == quiz[nPerg].resposta) {
+            Perguntar(++nPerg)
+            Acertos++
+            return
+          }
+          Erros++
+          if(elHard.checked){
+              nPerg = 0
+          }
+          return
     }
-}
-function Perguntar(){
-    Pergunta.innerHTML =  dados[Seletor].pergunta
-    RespostaCerta = dados[Seletor].respCerta
-    Contador.innerHTML = Seletor.toString() + "/30"
-    BTR1.innerHTML = dados[Seletor].btr1
-    BTR2.innerHTML = dados[Seletor].btr2
-    BTR3.innerHTML = dados[Seletor].btr3
-    BTR4.innerHTML = dados[Seletor].btr4
-    BTR5.innerHTML = dados[Seletor].btr5
-    BTR6.innerHTML = dados[Seletor].btr6
+    elAcertos.innerHTML = "Acertos: " + Acertos
+    elErros.innerHTML = "Erros: " + Erros
+    nPerg = 0
+    Erros = 0
+    Acertos = 0
+    Perguntar(nPerg)
+  })
 }
 
-//respostas
-function b1(){
-    RespostaUsuario=1
-    Comparar()
-}
-function b2(){
-    RespostaUsuario=2
-    Comparar()
-}
-function b3(){
-    RespostaUsuario=3
-    Comparar()
-}
-function b4(){
-    RespostaUsuario=4
-    Comparar()
-}
-function b5(){
-    RespostaUsuario=5
-    Comparar()
-}
-function b6(){
-    RespostaUsuario=6
-    Comparar()
-}
+main()

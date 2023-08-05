@@ -1,28 +1,25 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: "minecraft";
+    src: url(globalAssets/fontes/1_MinecraftRegular1.otf);
 }
-/* object {
-    width: 100%;
-    overflow-y: hidden;
-    position: sticky;
-    z-index: 2;
-} */
+body{
+    background-image: url(globalAssets/terra.jpeg);
+}
 header {
-    position: relative;
     margin: 0px 2vw auto 2vw;
-    border: 1px solid black;
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    background-color: darkslategray;
+    font-family: "minecraft";
 }
 header div#boas {
     font-size: 3rem;
-    color: black;
+    color: white;
 }
 header div#qmsomos {
     font-size:1.5rem;
-    color: black;
+    color: white;
     margin-top: 1vw;
  
 }
@@ -52,18 +49,28 @@ header div#assuntos :is(div.lquiz, div.lwiki):hover a{
 main {
     position: relative;
     margin: 1vw 2vw auto 0;
-    border: 1px solid black;
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: lightcyan;
+    padding-bottom: 0.15vw;
+}
+main img{
+    width: 70%;
 }
 main div.sobre {
     font-size:1.4rem;
     text-align: justify;
     padding-left: 1vw;
     padding-right: 1vw;
+    background-color: white;
+    margin: auto 0.8vw auto 0.8vw;
 }
-main span{
+main span.risco{
     text-decoration: line-through;
+}
+main span.pqno{
+    font-size: 0.4rem;
+    color: lightgray;
 }

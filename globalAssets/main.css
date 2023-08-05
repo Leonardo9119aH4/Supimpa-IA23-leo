@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "minecraft";
+    src: url(fontes/1_MinecraftRegular1.otf);
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -79,7 +83,9 @@ nav ul>li>ul>li:hover>button{
     background-color: gray;
     color: blue;
 }
-
+header{
+    font-family: "minecraft";
+}
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
