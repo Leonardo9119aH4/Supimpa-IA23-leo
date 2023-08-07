@@ -19,6 +19,9 @@ main #quiz{
 main :is(#NP, #pergunta){
     display: inline-block;
 }
+main #pergunta{
+    flex-wrap: wrap;
+}
 main #NP{
     font-family: "minecraft";
     background-color: black;

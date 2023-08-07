@@ -1,7 +1,7 @@
 [
   {
     "pergunta": "Até quantos blocos a redstone pode conduzir?",
-    "alternativas": [1,2,3,4,7,9,15,17,19,"Ilimitado"],
+    "alternativas": [1,2,4,7,9,12,15,17,19,"Ilimitado"],
     "resposta": 6
   },
   {
@@ -31,13 +31,13 @@
   },
   {
     "pergunta": "Em qual linguagem de programação o Minecraft Bedrock Edition foi criado?", 
-    "alternativas": ["Java", "Assembly", "Brainfuck", "C#", "HTML e CSS", "Javascript", "Bash", "Linguagem própria", "Lua", "C++"],
+    "alternativas": ["Java", "Assembly", "Brainfuck", "C#", "HTML e CSS", "Javascript", "Python", "Linguagem própria", "Lua", "C++"],
     "resposta": 9
   },
   {
-    "pergunta": "Qual Sistema Operacional abaixo não existe?", 
-    "alternativas": ["Windows Vista", "Windows 9", "Ubuntu", "Peppermint", "FreeBSD", "MacOS Monterey", "Lubuntu", "86-DOS", "Uwuntu", "Windows 3.1"],
-    "resposta": 1
+    "pergunta": "Já existiu o crafting da maçã dourada encantada? Se sim como era o crafting?", 
+    "alternativas": ["Nunca existiu", "Precisa encantar a maçã dourada na mesa de encantamentos", "Uma maçã e 8 blocos de ouro", "Uma maçã e 8 pepitas de ouro", "Uma maçã e 1 estrela do nether"],
+    "resposta": 2
   },
   {
     "pergunta": "É uma das funções do comparador de redstone:", 
@@ -45,8 +45,13 @@
     "resposta": 3
   },
   {
-    "pergunta": "Dado que f(x)=ax²+3x-1 e que f(3)=-1, qual valor de a?", 
-    "alternativas": ["NaN", "-7", "-1", "71", "16", "-3", "6", "-11", "null", "(9a+2)/y"],
-    "resposta": 2
+    "pergunta": "Em uma van, considerando que o avô é o motorista, tem 1 avô, 1 avó, 2 pais, 2 mães, 5 filhos e 1 neto. Quantas pessoas tem na van? ", 
+    "alternativas": [3, 5, 6, 9, 12, 15],
+    "resposta": "NP"
+  },
+  {
+    "pergunta": "teste",
+    "alternativas": [1, 2],
+    "resposta": 0
   }
 ]
