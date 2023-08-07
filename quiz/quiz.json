@@ -45,7 +45,7 @@
     "resposta": 3
   },
   {
-    "pergunta": "Em uma van, considerando que o avô é o motorista, tem 1 avô, 1 avó, 2 pais, 2 mães, 5 filhos e 1 neto. Quantas pessoas tem na van? ", 
+    "pergunta": "Em uma van, considerando que o avô é o motorista, tem 1 avô, 1 avó, 2 pais,<br>2 mães, 5 filhos e 1 neto. Quantas pessoas tem na van?</br>", 
     "alternativas": [3, 5, 6, 9, 12, 15],
     "resposta": "NP"
   },
@@ -60,7 +60,7 @@
     "resposta": 0
   },
   {
-    "pergunta": "<div id='R'>Um</div> bloco de comando tem o comando '/give @a bedrock', ao ser executado, quantas bedrock cada jogador recebeu, considerando que tem 3 jogadores no mapa?",
+    "pergunta": "<div id='R'>Um</div> bloco de comando tem o comando '/give @a bedrock' ao ser executado, quantas <br>bedrock cada jogador recebeu, considerando que tem 3 jogadores no mapa?</br>",
     "alternativas": [0, 2, 3, 5, "XP", 7, 8, 10, 11],
     "resposta": "R"
   },

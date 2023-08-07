@@ -2,7 +2,7 @@
 
 const elQuiz = document.querySelector("#quiz")
 const elPergunta = elQuiz.querySelector("#pergunta")
-const elRP = elPergunta.querySelector("#R") //seleciona uma div resposta na pergunta
+let elRP = elPergunta.querySelector("#R") //seleciona uma div resposta na pergunta
 const elNP = elQuiz.querySelector("#NP")
 const elAlt = elQuiz.querySelector("#alternativas")
 const elEr = elQuiz.querySelector("#totalErros") //erros ou tentativas
@@ -34,6 +34,7 @@ async function main() {
       }
       document.documentElement.style.setProperty("--Col", Math.ceil(quiz[nPe].alternativas.length/3))
       elNP.innerHTML = nPe + 1
+      elRP = elPergunta.querySelector("#R")
     }
     else{
       Reset()
