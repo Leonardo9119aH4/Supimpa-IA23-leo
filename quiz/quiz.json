@@ -50,8 +50,48 @@
     "resposta": "NP"
   },
   {
-    "pergunta": "teste",
-    "alternativas": [1, 2],
+    "pergunta": "O comando /execute at @e[type=creeper] run kill @s matará:",
+    "alternativas": ["Todos os creepers", "O creeper mais próximo", "O jogador mais próximo", "Todas as entidades", "Todos os jogadores", "Quem está executando o comando", "Ninguém"],
+    "resposta": 5
+  },
+  {
+    "pergunta": "O bloco musical sem nada em baixo faz som de:",
+    "alternativas": [""],
     "resposta": 0
+  },
+  {
+    "pergunta": "<div id='R'>Um</div> bloco de comando tem o comando '/give @a bedrock', ao ser executado, quantas bedrock cada jogador recebeu, considerando que tem 3 jogadores no mapa?",
+    "alternativas": [0, 2, 3, 5, "XP", 7, 8, 10, 11],
+    "resposta": "R"
+  },
+  {
+    "pergunta": "Quanto tempo leva para quebrar a obsidiana com picareta de diamante (em milisegundos)?",
+    "alternativas": [5170, 7100, 9400, 10000, 12400, 15500],
+    "resposta": 2
+  },
+  {
+    "pergunta": "",
+    "alternativas": [],
+    "resposta": 0
+  },
+  {
+    "pergunta": "Qual é o mob que mais tem vida do jogo?",
+    "alternativas": ["Warden", "Ender Dragon", "Whiter", "Iron Golem", "Villager", "Herobrine", "Steve", "Chaos Dragon", "GoTo loop"],
+    "resposta": 0
+  },
+  {
+    "pergunta": "Qual é o código secreto<div id='R'>?</div> Dica: não é 7AAF12",
+    "alternativas": ["12E1F", "7AAF12", 101010, "34EB2C", "CICADA3301", "1033ADACIC", "Neymar", -1, "!true", "C++", 17268, "Hollow Knight"],
+    "resposta": "R"
+  },
+  {
+    "pergunta": "O comando '/clear @r': ",
+    "alternativas": ["Limpa o meu inventário", "Mata um jogador", "Tira dos os efeitos de poção de um jogador aleatório", "Limpa o mundo", "Limpa o inventário de um jogador aleatório", "Deleta o mundo"],
+    "resposta": 4
+  },
+  {
+    "pergunta": "O que o comando 'get-process | stop-process -force' faz quando executado como administrador no powershell?",
+    "alternativas": ["Corrompe a BIOS do seu PC", "Mata todos os processos, resultando na BSOD", "Dá uma tela azul falsa", "Substitui o boot do seu pc", "Exibe uma lista de processos", "Para o processador"],
+    "resposta": 1
   }
 ]
