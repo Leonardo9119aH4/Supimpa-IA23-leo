@@ -1,0 +1,97 @@
+[
+  {
+    "pergunta": "Até quantos blocos a redstone pode conduzir?",
+    "alternativas": [1,2,4,7,9,12,15,17,19,"Ilimitado"],
+    "resposta": 6
+  },
+  {
+    "pergunta": "Até quantos blocos o pistão é capaz de empurrar?",
+    "alternativas": [1,2,3,4,5,6,8,10,11,15],
+    "resposta": 8
+  },
+  {
+    "pergunta": "Para que serve o comando /give no minecraft?",
+    "alternativas": ["Receber um item","Colocar um bloco", "Invocar um mob", "Adicionar um evento", "Desistir", "Dropar um item", "Instalar minecraft", "Instalar mods","Instalar OIETIF.bat","NDA"],
+    "resposta": 0
+  },
+  {
+    "pergunta": "Em que ano a Mojang foi comprada pela Microsoft?", 
+    "alternativas": ["3000 a.C.", 1995, 1998, 2000, "XP", 2007, 2010, 2014, 2016, 2018],
+    "resposta": 7
+  },
+  {
+    "pergunta": "Qual é o servidor mais jogado do minecraft?", 
+    "alternativas": ["Mineplex", "Lifeboat", "Hypixel", "Craftlandia", "Sky minigames", "Armageddon", "WynnCraft", "InPVP", "Ubuntu", "2P2T"],
+    "resposta": 2
+  },
+  {
+    "pergunta": "Qual comando é usado para preencher grandes volumes de bloco?", 
+    "alternativas": ["/give", "/setblock", "/setblocks", "//set", "/summon", "/fill", "Debug.Fill()", "format C:", "sudo rmdir /", "NDA"],
+    "resposta": 5
+  },
+  {
+    "pergunta": "Em qual linguagem de programação o Minecraft Bedrock Edition foi criado?", 
+    "alternativas": ["Java", "Assembly", "Brainfuck", "C#", "HTML e CSS", "Javascript", "Python", "Linguagem própria", "Lua", "C++"],
+    "resposta": 9
+  },
+  {
+    "pergunta": "Já existiu o crafting da maçã dourada encantada? Se sim como era o crafting?", 
+    "alternativas": ["Nunca existiu", "Precisa encantar a maçã dourada na mesa de encantamentos", "Uma maçã e 8 blocos de ouro", "Uma maçã e 8 pepitas de ouro", "Uma maçã e 1 estrela do nether"],
+    "resposta": 2
+  },
+  {
+    "pergunta": "É uma das funções do comparador de redstone:", 
+    "alternativas": ["Repetir o sinal", "Executar comandos", "Comparar 2 mobs", "Comparar 2 cargas", "Comparar 2 blocos", "Somar cargas", "Ativar a bluestone", "Crashar o jogo", "Corromper a BIOS do seu PC", "NDA"],
+    "resposta": 3
+  },
+  {
+    "pergunta": "Em uma van, considerando que o avô é o motorista, tem 1 avô, 1 avó, 2 pais,<br>2 mães, 5 filhos e 1 neto. Quantas pessoas tem na van?</br>", 
+    "alternativas": [3, 5, 6, 9, 12, 15],
+    "resposta": "NP"
+  },
+  {
+    "pergunta": "O comando /execute at @e[type=creeper] run kill @s matará:",
+    "alternativas": ["Todos os creepers", "O creeper mais próximo", "O jogador mais próximo", "Todas as entidades", "Todos os jogadores", "Quem está executando o comando", "Ninguém"],
+    "resposta": 5
+  },
+  {
+    "pergunta": "O bloco musical sem nada em baixo faz som de:",
+    "alternativas": [""],
+    "resposta": 0
+  },
+  {
+    "pergunta": "<div id='R'>Um</div> bloco de comando tem o comando '/give @a bedrock' ao ser executado, quantas <br>bedrock cada jogador recebeu, considerando que tem 3 jogadores no mapa?</br>",
+    "alternativas": [0, 2, 3, 5, "XP", 7, 8, 10, 11],
+    "resposta": "R"
+  },
+  {
+    "pergunta": "Quanto tempo leva para quebrar a obsidiana com picareta de diamante (em milisegundos)?",
+    "alternativas": [5170, 7100, 9400, 10000, 12400, 15500],
+    "resposta": 2
+  },
+  {
+    "pergunta": "",
+    "alternativas": [],
+    "resposta": 0
+  },
+  {
+    "pergunta": "Qual é o mob que mais tem vida do jogo?",
+    "alternativas": ["Warden", "Ender Dragon", "Whiter", "Iron Golem", "Villager", "Herobrine", "Steve", "Chaos Dragon", "GoTo loop"],
+    "resposta": 0
+  },
+  {
+    "pergunta": "Qual é o código secreto<div id='R'>?</div> Dica: não é 7AAF12",
+    "alternativas": ["12E1F", "7AAF12", 101010, "34EB2C", "CICADA3301", "1033ADACIC", "Neymar", -1, "!true", "C++", 17268, "Hollow Knight"],
+    "resposta": "R"
+  },
+  {
+    "pergunta": "O comando '/clear @r': ",
+    "alternativas": ["Limpa o meu inventário", "Mata um jogador", "Tira dos os efeitos de poção de um jogador aleatório", "Limpa o mundo", "Limpa o inventário de um jogador aleatório", "Deleta o mundo"],
+    "resposta": 4
+  },
+  {
+    "pergunta": "O que o comando 'get-process | stop-process -force' faz quando executado como administrador no powershell?",
+    "alternativas": ["Corrompe a BIOS do seu PC", "Mata todos os processos, resultando na BSOD", "Dá uma tela azul falsa", "Substitui o boot do seu pc", "Exibe uma lista de processos", "Para o processador"],
+    "resposta": 1
+  }
+]
