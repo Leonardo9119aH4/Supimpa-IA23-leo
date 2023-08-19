@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="content.css">
         <link rel="stylesheet" media="screen" href="globalAssets/main.css">
-        <script defer async src="globalAssets/main.js"></script>
+        <script defer async src="content.js"></script>
         <title>Wiki & Quiz sobre Redstone</title>
     </head>
     <body>
@@ -23,13 +23,18 @@
             </ul>
             <img id="navLogo" src="globalAssets/minelogo.png">
         </nav>
-        <div id="espacador"></div>
+        <div id="WikiList">
+            <div class="window">
+                <button>X</button>
+                <iframe src="globalAssets/listas/slwiki.html"></iframe>
+            </div>
+        </div>
         <header>
             <div id="boas">Bem-vindo ao Quiz & Wiki!</div>
             <div id="qmsomos">Nesta página você pode aprender mais sobre a redstone e testar seu conhecimento sobre esse pó vermelho</div>
             <div id="assuntos">
-                <div class="lquiz"><a href="quiz/index.html">Quiz para PROs</a></div>
-                <div class="lwiki"><a href="wiki/slwiki.html">Redstone Wiki</a></div>
+                <div class="lquiz">Quiz para PROs</div>
+                <div class="lwiki">Redstone Wiki</div>
             </div>
         </header>
         <main>

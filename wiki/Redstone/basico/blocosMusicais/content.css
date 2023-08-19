@@ -2,7 +2,7 @@ body{
     background-image: url(../../../../globalAssets/note_block.png);
 }
 header {
-    margin: 0 1vw 0 1vw;
+    margin: 12vh 1vw 0 1vw;
     padding: 0.1vw;
     background-color: rgba(168, 143, 166, 50%);
     text-align: center;
