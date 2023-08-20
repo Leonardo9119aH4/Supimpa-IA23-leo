@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "minecraft";
+    src: url(../fontes/1_MinecraftRegular1.otf);
+}
+body {
+    font-family: "minecraft";
+    background-color: white;
+}
+main {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    background-color: rgba(168, 143, 166, 50%);
+    font-size: 1.5rem;
+    font-family: "minecraft";
+}
+main>ul {
+    list-style: none;
+    font-family: "minecraft";
+}
+main div {
+    font-family: "minecraft";
+}
+.topico{
+    font-size: 1.5em;
+}
