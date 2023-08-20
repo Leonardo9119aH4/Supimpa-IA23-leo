@@ -56,7 +56,7 @@
   },
   {
     "pergunta": "O bloco musical sem nada em baixo faz som de:",
-    "alternativas": [""],
+    "alternativas": ["Violão", "Guitarra", "BIP", "Flauta", "Tambor", "Piano"],
     "resposta": 0
   },
   {
@@ -70,9 +70,9 @@
     "resposta": 2
   },
   {
-    "pergunta": "",
-    "alternativas": [],
-    "resposta": 0
+    "pergunta": "Qual Sistema Operacional abaixo não existe?",
+    "alternativas": ["Windows Vista", "Windows 9", "Ubuntu", "Peppermint", "FreeBSD", "MacOS Monterey", "Lubuntu", "86-DOS", "Uwuntu", "Windows 3.1"],
+    "resposta": 1
   },
   {
     "pergunta": "Qual é o mob que mais tem vida do jogo?",

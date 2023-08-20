@@ -12,3 +12,8 @@ elWiki.addEventListener("click", ew =>{
 Fechar.addEventListener("click", X =>{
     modalWiki.classList.remove("active");
 })
+document.addEventListener("keydown", esc =>{
+    if(esc.keyCode === 27){
+        modalWiki.classList.remove("active");
+    }
+})

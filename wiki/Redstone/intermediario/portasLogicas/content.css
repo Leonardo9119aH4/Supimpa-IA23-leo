@@ -22,6 +22,9 @@ main div.texto{
     display: inline-block;
     text-align: justify;
 }
+main div.texto>div{
+    margin-right: 1vw;
+}
 main h1{
     text-align: center;
 }

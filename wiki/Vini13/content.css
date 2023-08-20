@@ -16,6 +16,15 @@ header div.titulo {
     margin-top: 40px;
     margin-left: 100px;
 }
+header div.titulo a{
+    text-decoration: none;
+    color: black;
+}
+header div.titulo a:hover{
+    color: red;
+    cursor: pointer;
+}
+
 header div.subtitulo {
     color: red;
     font-size: 40px;

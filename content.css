@@ -25,6 +25,8 @@ header {
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
     visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
 }
 #WikiList .window button{
     position: absolute;
@@ -44,6 +46,7 @@ header {
 }
 #WikiList.active{
     visibility: visible;
+    opacity: 1;
 }
 #WikiList .window{
     position: absolute;
@@ -92,16 +95,17 @@ header div#assuntos :is(div.lquiz, div.lwiki):hover {
     color: blue;
 }
 main {
-    position: relative;
     margin: 2vh 1vw auto 1vw;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: lightcyan;
     padding-bottom: 0.15vw;
+    font-size: 1.5rem;
 }
-main img{
-    width: 70%;
+main iframe{
+    width: 100%;
+    height: 80vh;
 }
 main div.sobre {
     font-size:1.4rem;

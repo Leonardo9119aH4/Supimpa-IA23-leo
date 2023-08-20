@@ -6,6 +6,121 @@
     --Col: 1; /* é alterado pelo js */
     --Row: 3;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+}
+#popup{
+    position: fixed;
+    top: 30vmin;
+    display: grid;
+    place-self: center;
+    z-index: 2;
+    width: 40vmin;
+    height: 21vmin;
+    background-color: rgba(29, 144, 207, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 1.5%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup.aberto{
+    visibility: visible;
+    opacity: 1;
+}
+#popup>button{
+    z-index: 3;
+    position: absolute;
+    justify-self: right;
+    align-self: self-start;
+    width: 4vmin;
+    height: 2vmin;
+    padding: 0;
+    background-color: red;
+    color: white;
+    border: none;
+}
+#popup>button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 64, 64);
+}
+#popup img{
+    width: 10vmin;
+    display: inline-block;
+}
+
+#popup #gameOver{
+    position: absolute;
+    background-color: white;
+    width: 38vmin;
+    height: 18vmin;
+    margin-top: 1vmin;
+    place-self: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup #gameOver.aberto{
+    visibility: visible;
+    opacity: 1;
+}
+#popup #gameOver .texto{
+    display: flex;
+    text-align: center;
+}
+#popup #gameOver .texto>p{
+    margin-left: auto;
+    margin-right: auto;
+}
+#popup #gameOver button{
+    float: right;
+    margin-right: 1vmin;
+    background-image: url(../globalAssets/aero_button.png);
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 23px;
+    cursor: pointer;
+}
+
+#popup #parabens{
+    position: absolute;
+    background-color: white;
+    width: 38vmin;
+    height: 18vmin;
+    margin-top: 1vmin;
+    place-self: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup #parabens.aberto{
+    visibility: visible;
+    opacity: 1;
+}
+#popup #parabens .texto{
+    display: flex;
+    text-align: center;
+}
+#popup #parabens .texto>p{
+    margin-left: auto;
+    margin-right: auto;
+}
+#popup #parabens button{
+    float: right;
+    margin-right: 1vmin;
+    background-image: url(../globalAssets/aero_button.png);
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25px;
+    cursor: pointer;
+}
+
 main{
     display: flex;
     justify-content: center;
@@ -22,6 +137,10 @@ main :is(#NP, #pergunta){
 }
 main #pergunta{
     flex-wrap: wrap;
+    max-width: 80vw;
+}
+main #pergunta #R{
+    display: inline-block;
 }
 main #NP{
     font-family: "minecraft";

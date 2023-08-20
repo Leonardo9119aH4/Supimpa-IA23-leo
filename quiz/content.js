@@ -7,7 +7,17 @@ const elNP = elQuiz.querySelector("#NP")
 const elAlt = elQuiz.querySelector("#alternativas")
 const elEr = elQuiz.querySelector("#totalErros") //erros ou tentativas
 const elPo = elQuiz.querySelector("#pontos")
-const elHard = elQuiz.querySelector("#botao input")
+const elHard = elQuiz.querySelector("#botao input") //botão do modo difícil
+const elPopup = document.querySelector("#popup") //popups
+const elGameOver = elPopup.querySelector("#gameOver") //popup de game over
+const elParabens = elPopup.querySelector("#parabens") //popup apos zerar o quiz
+const fechar = elPopup.querySelectorAll("button") //botões de fechar popup
+
+
+const hit = new Audio("../globalAssets/hit.mp3")
+const bsod = new Audio("../globalAssets/bsod.mp3")
+const xpOrb = new Audio("../globalAssets/xp_orb.mp3")
+const conquista = new Audio("../globalAssets/rare_achievement.mp3")
 
 async function main() {
   const request = await fetch("quiz.json")
@@ -39,6 +49,9 @@ async function main() {
     else{
       Reset()
       Tent = 0
+      conquista.play()
+      elPopup.classList.add("aberto")
+      elParabens.classList.add("aberto")
     }
   }
   function Acerto(){
@@ -46,19 +59,25 @@ async function main() {
     if(!elHard.checked){
       Po += 1/Er
       Er = 1
+      xpOrb.play()
     }
     if(elHard.checked){
       Po++
+      xpOrb.play()
     }
   }
   function Erro(){
     T_Er++
       if(!elHard.checked){
         Er++
+        hit.play()
       }
       if(elHard.checked){
         Reset()
         Tent++
+        bsod.play()
+        elPopup.classList.add("aberto")
+        elGameOver.classList.add("aberto")
       }
   }
   function Exibir(){
@@ -93,23 +112,45 @@ async function main() {
     Exibir()
     Perguntar(nP)
   })
-  if(elRP != null){
-    elRP.addEventListener("click", aev =>{
-      if(quiz[nP].resposta == "R"){
-        Acerto()
-      }
-      else{
-        Erro()
-      }
+  elPergunta.addEventListener("click", ev =>{
+    if(elRP != null){
+      elRP.addEventListener("click", aev =>{
+        if(quiz[nP].resposta == "R"){
+          Acerto()
+        }
+        else{
+          Erro()
+        }
+        Exibir()
+        Perguntar(nP)
+      })
+    }
+    else{
+      Erro()
       Exibir()
       Perguntar(nP)
-    })
-  }
+    }
+  })
 
   elHard.addEventListener("click", reset => {
     Reset()
     Exibir()
     Perguntar(nP)
+  })
+
+  fechar.forEach(close=> {
+    close.addEventListener("click", () =>{
+      elPopup.classList.remove("aberto")
+      elGameOver.classList.remove("aberto")
+      elParabens.classList.remove("aberto")
+    })
+  })
+  document.addEventListener("keydown", esc =>{
+    if(esc.keyCode === 27){
+      elPopup.classList.remove("aberto")
+      elGameOver.classList.remove("aberto")
+      elParabens.classList.remove("aberto")
+    }
   })
 
   Perguntar(0)
