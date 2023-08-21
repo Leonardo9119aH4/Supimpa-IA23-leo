@@ -25,13 +25,13 @@ main div#t1, div#t2, div#t3{
     display: inline-block;
 }
 .topico{
-    font-size: 2rem;
+    font-size: max(1rem, 2vw);
     text-align: center;
     display: inline-block;
     margin-left: 37%;
 }
 #tpf{
-    font-size: 2rem;
+    font-size: max(1rem, 2vw);
     text-align: center;
     display: inline-block;
     margin-left: 44%;

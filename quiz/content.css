@@ -106,7 +106,7 @@ body{
 #popup #parabens .texto{
     display: flex;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: max(1.5vw, 0.9rem);
     margin-top: 0.4vh;
 }
 #popup #parabens .texto>p{
@@ -150,7 +150,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
+    font-size: max(2vw, 1rem);
     margin-top: 14vh;
 }
 main #questao{

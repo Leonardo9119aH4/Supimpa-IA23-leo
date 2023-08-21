@@ -40,7 +40,7 @@ main div.texto2 div.textoInterno{
 }
 .topico{
     text-align: center;
-    font-size: 2rem;
+    font-size: max(1rem, 2vw);
 }
 main div.texto3{
     display: inline-block;

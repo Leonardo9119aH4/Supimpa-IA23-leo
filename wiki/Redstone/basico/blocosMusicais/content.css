@@ -2,11 +2,11 @@ body{
     background-image: url(../../../../globalAssets/note_block.png);
 }
 header {
-    margin: 12vh 1vw 0 1vw;
+    margin: 14vh 1vw 0 1vw;
     padding: 0.1vw;
     background-color: rgba(168, 143, 166, 50%);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: max(1rem, 1.5vw);
 }
 main{
     background-color: white;
@@ -15,7 +15,7 @@ main{
 main div.texto{
     text-align: justify;
     margin: 0 0.5vw 0 0.5vw;
-    font-size: 1.25rem;
+    font-size: max(1rem, 1.25vw);
 }
 main h1{
     text-align: center;
@@ -25,6 +25,9 @@ main div.menu{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 0.5vw;
+}
+main audio{
+    width: 100%;
 }
 main img{
     width: 100%;

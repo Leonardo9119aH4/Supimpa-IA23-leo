@@ -85,6 +85,8 @@ footer{
     text-align: justify;
     list-style: none;
     color: white;
+    padding: 0;
+    overflow-wrap: break-word;
 }
 footer div{
     margin-left: 0.3vw;
@@ -101,6 +103,6 @@ footer div ul li:hover a{
     color: orangered;
 }
 .tituloFooter{
-    font-size: 1.5rem;
+    font-size: max(1.5vw, 1rem);
     text-align: center;
 }
