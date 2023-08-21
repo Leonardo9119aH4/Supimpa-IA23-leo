@@ -1,18 +1,28 @@
+@keyframes piscante{
+    0%, 32% {
+        color: black;
+    }
+    33%, 66% {
+        color: blue;
+    }
+    67%, 100% {
+        color: black;
+    }
+}
+
 body{
     background-image: url(../../../globalAssets/minecraft.png);
 }
 header{
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    margin-top: 12vh;
+    margin-top: 14vh;
 }
 header a{
     text-decoration: none;
-    color: black;
+    animation: piscante 3s linear infinite;
 }
-header a.on{
-    color: blue;
-}
+
 main{
     text-align: justify;
     background-color: white;

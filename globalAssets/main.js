@@ -1,4 +1,4 @@
-async function main() {
+export async function main() {
     const scriptElement = document.currentScript;
     const scriptSrc = scriptElement.src;
     const dirJS = scriptSrc.substring(0, scriptSrc.lastIndexOf('/'));

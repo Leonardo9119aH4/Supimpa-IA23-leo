@@ -2,7 +2,7 @@
 
 const elQuiz = document.querySelector("#quiz")
 const elPergunta = elQuiz.querySelector("#pergunta")
-let elRP = elPergunta.querySelector("#R") //seleciona uma div resposta na pergunta
+let elRP = elPergunta.querySelector("#R") //armazena a div-resposta
 const elNP = elQuiz.querySelector("#NP")
 const elAlt = elQuiz.querySelector("#alternativas")
 const elEr = elQuiz.querySelector("#totalErros") //erros ou tentativas
@@ -12,7 +12,7 @@ const elPopup = document.querySelector("#popup") //popups
 const elGameOver = elPopup.querySelector("#gameOver") //popup de game over
 const elParabens = elPopup.querySelector("#parabens") //popup apos zerar o quiz
 const fechar = elPopup.querySelectorAll("button") //botões de fechar popup
-
+const fastBack = document.querySelector("#fastback") //aviso rápido de acerto ou erro
 
 const hit = new Audio("../globalAssets/hit.mp3")
 const bsod = new Audio("../globalAssets/bsod.mp3")
@@ -45,6 +45,18 @@ async function main() {
       document.documentElement.style.setProperty("--Col", Math.ceil(quiz[nPe].alternativas.length/3))
       elNP.innerHTML = nPe + 1
       elRP = elPergunta.querySelector("#R")
+      if(elRP != null){
+        elRP.addEventListener("click", aev =>{
+          if(quiz[nP].resposta == "R"){
+            Acerto()
+          }
+          else{
+            Erro()
+          }
+          Exibir()
+          Perguntar(nP)
+        })
+      }
     }
     else{
       Reset()
@@ -60,10 +72,20 @@ async function main() {
       Po += 1/Er
       Er = 1
       xpOrb.play()
+      fastBack.classList.add("acerto")
+      fastBack.innerHTML = "Você acertou!"
+      setTimeout(() => {
+        fastBack.classList.remove("acerto")
+      }, 1000)
     }
     if(elHard.checked){
       Po++
       xpOrb.play()
+      fastBack.classList.add("acerto")
+      fastBack.innerHTML = "Você acertou!"
+      setTimeout(() => {
+        fastBack.classList.remove("acerto")
+      }, 1000)
     }
   }
   function Erro(){
@@ -71,6 +93,11 @@ async function main() {
       if(!elHard.checked){
         Er++
         hit.play()
+        fastBack.classList.add("erro")
+        fastBack.innerHTML = "Você errou!"
+      setTimeout(() => {
+        fastBack.classList.remove("erro")
+      }, 1000)
       }
       if(elHard.checked){
         Reset()
@@ -87,7 +114,12 @@ async function main() {
     if(elHard.checked){
       elEr.innerHTML = "Tentativas: " + Tent
     }
-    elPo.innerHTML = "Pontuação: " + Po
+    if(Number.isInteger(Po)){
+      elPo.innerHTML = "Pontuação: " + Po
+    }
+    else{
+      elPo.innerHTML = "Pontuação: " + Po.toFixed(2)
+    }
   }
   elAlt.addEventListener("click", ev => {
     const AltC = ev.target;
@@ -112,26 +144,6 @@ async function main() {
     Exibir()
     Perguntar(nP)
   })
-  elPergunta.addEventListener("click", ev =>{
-    if(elRP != null){
-      elRP.addEventListener("click", aev =>{
-        if(quiz[nP].resposta == "R"){
-          Acerto()
-        }
-        else{
-          Erro()
-        }
-        Exibir()
-        Perguntar(nP)
-      })
-    }
-    else{
-      Erro()
-      Exibir()
-      Perguntar(nP)
-    }
-  })
-
   elHard.addEventListener("click", reset => {
     Reset()
     Exibir()

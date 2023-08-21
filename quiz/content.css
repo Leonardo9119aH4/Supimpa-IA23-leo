@@ -18,7 +18,7 @@ body{
     place-self: center;
     z-index: 2;
     width: 40vmin;
-    height: 21vmin;
+    height: 22vmin;
     background-color: rgba(29, 144, 207, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -38,7 +38,7 @@ body{
     justify-self: right;
     align-self: self-start;
     width: 4vmin;
-    height: 2vmin;
+    height: 2.5vmin;
     padding: 0;
     background-color: red;
     color: white;
@@ -58,7 +58,7 @@ body{
     background-color: white;
     width: 38vmin;
     height: 18vmin;
-    margin-top: 1vmin;
+    margin-top: 2vmin;
     place-self: center;
     visibility: hidden;
     opacity: 0;
@@ -84,6 +84,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 23px;
+    width: 80px;
     cursor: pointer;
 }
 
@@ -105,6 +106,8 @@ body{
 #popup #parabens .texto{
     display: flex;
     text-align: center;
+    font-size: 0.9rem;
+    margin-top: 0.4vh;
 }
 #popup #parabens .texto>p{
     margin-left: auto;
@@ -117,20 +120,49 @@ body{
     border: none;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 25px;
+    height: 2.1rem;
     cursor: pointer;
 }
 
+#fastback{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    place-self: center;
+    height: 30vh;
+    width: 50vw;
+    top: 20vh;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+}
+#fastback:is(.acerto, .erro){
+    visibility: visible;
+    opacity: 1;
+}
+#fastback.acerto{
+    background-color: green;
+}
+#fastback.erro{
+    background-color: red;
+}
 main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    margin-top: 12vh;
+    font-size: 3vw;
+    margin-top: 14vh;
 }
+main #questao{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
 main #quiz{
-    flex: none;
     background-color: antiquewhite;
+    place-items: center;
 }
 main :is(#NP, #pergunta){
     display: inline-block;
@@ -147,6 +179,7 @@ main #NP{
     background-color: black;
     color: white;
     padding: 0.3vw;
+    margin-top: 0;
 }
 main #alternativas{
     display: grid;

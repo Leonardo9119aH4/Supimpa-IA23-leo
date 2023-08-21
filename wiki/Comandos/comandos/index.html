@@ -6,7 +6,7 @@
         <link rel="stylesheet" media="screen" href="content.css">
         <link rel="stylesheet" media="screen" href="../../../globalAssets/main.css">
         <script defer async src="../../../globalAssets/main.js"></script>
-        <title>Comandos básicos e sintaxe</title>
+        <title>Alguns comandos avançados</title>
     </head>
     <body>
         <nav>
@@ -32,7 +32,7 @@
                 <h1>/execute</h1>
                 <p>
                     Este comando é usado para escolher quem vai executar e onde e em quem os comandos vão ser executados, é composto de vários subcomandos, são 'blocos de
-                    comando' que formam esse comando. Sintaxe geral: /exexute &#10092subcomandos&#10093 &#10092comando a ser executado&#10093
+                    comando' que formam esse comando. Sintaxe geral: /execute &#10092subcomandos&#10093 &#10092comando a ser executado&#10093
                 </p>
                 <p>as : seleciona um executor do comando, sintaxe: /execute ... as &#10092alvo&#10093 ... run &#10092comando&#10093</p>
                 <p>at : seleciona em quem o comando vai ser executado, não mudando o executor, sintaxe /execute ... at &#10092alvo&#10093 ... run &#10092comando&#10093</p>
@@ -42,7 +42,28 @@
                 <p>positioned : seleciona o local de execução do comando, sintaxe: /execute ... positioned &#10092X&#10093 &#10092Y&#10093 &#10092Z&#10093 ... run &#10092comando&#10093</p>
                 <p>run : executa o comando em si, deve ser colocado no final, sinyaxe /execute ... run &#10092comando&#10093</p>
                 <h1>/scoreboard</h1>
-                <p></p>
+                <p>
+                    Este comando é usado para gerenciar, adicionar e remover objetivos, pontuações, placares, times e tags.
+                </p>
+                <p>Sintaxe geral scoreboard objetivos: &#10092add|list|modify|remove|setdisplay&#10093 (&#10092slot&#10093) &#10092objective&#10093 &#10092argumentos&#10093</p>
+                <p>Sintaxe geral scorevoard jogadores: &#10092add|enable|get|list|operation|remove|reset|set&#10093 &#10092alvo&#10093 (&#10092objetivos&#10093) (&#10092argumentos&#10093) (&#10092pontuação&#10093)</p>
+                <p>Argumento "list" lista todos os objetivos e pontuações existentes.</p>
+                <p>Argumento "setdisplay" seleciona onde serão exibidas as pontuações podendo ser "list" ficando a pontuação
+                    na lista de jogadoes do servidor, "sidebar" ficando em uma tabela à direita do jogador e "bellowname" exibindo
+                    acima da cabeça do jogador.
+                </p>
+                <p>
+                    Exemplo: /scoreboard ... setdisplay &#10092tipo&#10093 ...
+                </p>
+                <div class="imagens">
+                    <img src="list.webp"><img src="sidebar.webp">
+                </div>
+                <p>Argumentos "add", "remove" e "modify" servem para adicionar, remover e modificar um objetivo, tendo
+                    critério uma conquista ou ação específica.
+                </p>
+                <h2>Manipulação de pontuação</h2>
+                <p>Argumento "add" serve para somar a pontuação de um jogador.</p>
+                <p>Argumento "set" serve para definir uma pontuação.</p>
             </div>
         </main>
         <footer>

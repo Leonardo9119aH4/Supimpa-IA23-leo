@@ -1,3 +1,4 @@
+
 const elQuiz = document.querySelector(".lquiz");
 const elWiki = document.querySelector(".lwiki");
 const modalWiki = document.querySelector("#WikiList");
