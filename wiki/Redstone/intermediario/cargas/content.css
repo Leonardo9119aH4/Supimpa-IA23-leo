@@ -10,14 +10,16 @@ header {
 main {
     margin-top: 0.5vw;
     background-color: white;
-    text-align: justify;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 main h1{
     text-align: center;
 }
 main img{
     width: 100%;
-    margin-top: 1vw;
+    margin: auto 0 auto 0;
 }
 main div.conteudo{
     display: grid;

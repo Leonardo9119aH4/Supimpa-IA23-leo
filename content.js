@@ -1,3 +1,26 @@
+const btAleatorio = document.querySelector("#aleatorio"); //botão página aleatória
+btAleatorio.addEventListener("click", run =>{
+    const paginas = [
+        "/index.html",
+        "/quiz/index.html",
+        "/wiki/Comandos/basico/index.html",
+        "/wiki/Comandos/cmdblock/index.html",
+        "/wiki/Comandos/comandos/index.html",
+        "/wiki/Comandos/mctools/index.html",
+        "/wiki/Redstone/basico/blocosMusicais/index.html",
+        "/wiki/Redstone/basico/pistoes/index.html",
+        "/wiki/Redstone/basico/redstone/index.html",
+        "/wiki/Redstone/intermediario/cargas/index.html",
+        "/wiki/Redstone/intermediario/circuitos/index.html",
+        "/wiki/Redstone/intermediario/portasLogicas/index.html",
+        "/wiki/Vini13/index.html"
+    ]
+    const nAleatorio = Math.floor(Math.random() * paginas.length);
+    const pgAleatoria = paginas[nAleatorio];
+    window.location.href = pgAleatoria;
+})
+
+//
 
 const elQuiz = document.querySelector(".lquiz");
 const elWiki = document.querySelector(".lwiki");

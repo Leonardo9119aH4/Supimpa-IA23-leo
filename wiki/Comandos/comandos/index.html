@@ -45,25 +45,30 @@
                 <p>
                     Este comando é usado para gerenciar, adicionar e remover objetivos, pontuações, placares, times e tags.
                 </p>
-                <p>Sintaxe geral scoreboard objetivos: &#10092add|list|modify|remove|setdisplay&#10093 (&#10092slot&#10093) &#10092objective&#10093 &#10092argumentos&#10093</p>
-                <p>Sintaxe geral scorevoard jogadores: &#10092add|enable|get|list|operation|remove|reset|set&#10093 &#10092alvo&#10093 (&#10092objetivos&#10093) (&#10092argumentos&#10093) (&#10092pontuação&#10093)</p>
+                <p>Sintaxe geral scoreboard objetivos: /scoreboard objectives &#10092add|list|modify|remove|setdisplay&#10093 (&#10092slot&#10093) &#10092objective&#10093 &#10092argumentos&#10093</p>
+                <p>Sintaxe geral scorevoard jogadores: /scoreboard players &#10092add|enable|get|list|operation|remove|reset|set&#10093 &#10092alvo&#10093 (&#10092objetivos&#10093) (&#10092argumentos&#10093) (&#10092pontuação&#10093)</p>
+                <p>Para usar um sistema de pontuação, primeiro é nescessário adicionar um objetivo.</p>
+                <h1>Manipuladores de objetivos:</h1>
+                <p>Argumentos "add" e "remove" servem para adicionar e remover um objetivo, tendo critério uma conquista ou ação específica.</p>
+                <p>Argumento "modify" serve para alterar o <strong>nome de exibição</strong> a ser exibido. Sintaxe: /scoreboard objectives modify Pontuacao displayname "&#10092nome&#10093"</p>
                 <p>Argumento "list" lista todos os objetivos e pontuações existentes.</p>
-                <p>Argumento "setdisplay" seleciona onde serão exibidas as pontuações podendo ser "list" ficando a pontuação
-                    na lista de jogadoes do servidor, "sidebar" ficando em uma tabela à direita do jogador e "bellowname" exibindo
-                    acima da cabeça do jogador.
+                <p>Argumento "setdisplay" seleciona onde serão exibidas as pontuações de um objetivo podendo ser "list" ficando a pontuação
+                    na lista de jogadoes do servidor, "sidebar" ficando em uma tabela à direita do jogador e "bellowname" exibindo acima da cabeça do jogador.
                 </p>
                 <p>
                     Exemplo: /scoreboard ... setdisplay &#10092tipo&#10093 ...
                 </p>
                 <div class="imagens">
-                    <img src="list.webp"><img src="sidebar.webp">
+                    <img src="list.png"><img src="sidebar.png"><img src="BelowName.png">
                 </div>
-                <p>Argumentos "add", "remove" e "modify" servem para adicionar, remover e modificar um objetivo, tendo
-                    critério uma conquista ou ação específica.
-                </p>
+                
                 <h2>Manipulação de pontuação</h2>
-                <p>Argumento "add" serve para somar a pontuação de um jogador.</p>
-                <p>Argumento "set" serve para definir uma pontuação.</p>
+                <p>Argumento "add" serve para somar a pontuação de um jogador. Sintaxe: /scoreboard players add @a &#10092objetivo&#10093 &#10092número&#10093</p>
+                <p>Argumento "set" serve para definir uma pontuação. Sintaxe: /scoreboard players set @a &#10092objetivo&#10093 &#10092número&#10093</p>
+                <p>Argumento "get" serve para obter a pontuação de um jogador. Sintaxe: /scoreboard players get &#10092alvo&#10093 &#10092objetivo&#10093</p>
+                <p>Argumento "reset" serve para redefinir a pontuação de um jogador, ou seja, este jogador ficará sem o objetivo. Sintaxe: /scoreboard players reset &#10092alvo&#10093 &#10092objetivo&#10093</p>
+                <p>Argumento "operation" serve para igualar, somar, dividir etc a pontuação de um jogador com outro.</p>
+                <p>Sintaxe: /scoreboard players operation &#10092alvo1 (vai alterar)&#10093 &#10092objetivo&#10093 &#10092operador&#10093 &#10092alvo2 (não vai alterar)&#10093 &#10092objetivo&#10093</p>
             </div>
         </main>
         <footer>
