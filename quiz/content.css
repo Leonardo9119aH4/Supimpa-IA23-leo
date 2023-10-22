@@ -9,7 +9,7 @@
 body{
     display: flex;
     flex-direction: column;
-    height: 97vh;
+    overflow: hidden;
 }
 #popup{
     position: fixed;

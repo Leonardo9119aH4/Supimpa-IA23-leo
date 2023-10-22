@@ -1,5 +1,8 @@
 const btAleatorio = document.querySelector("#aleatorio"); //botão página aleatória
-btAleatorio.addEventListener("click", run =>{
+const MenuHamb = document.querySelector("menu"); //menu lateral
+const btMenuHamb = MenuHamb.querySelector("#btLHamburger"); //botão menu hamburger lateral
+
+btAleatorio.addEventListener("click", random =>{
     const paginas = [
         "/index.html",
         "/quiz/index.html",
@@ -18,6 +21,10 @@ btAleatorio.addEventListener("click", run =>{
     const nAleatorio = Math.floor(Math.random() * paginas.length);
     const pgAleatoria = paginas[nAleatorio];
     window.location.href = pgAleatoria;
+})
+
+btMenuHamb.addEventListener("click", LOpen =>{
+    MenuHamb.classList.toggle("open-menu");
 })
 
 //
