@@ -95,7 +95,7 @@ header div#assuntos :is(div.lquiz, div.lwiki):hover {
     color: blue;
 }
 main {
-    margin: 2vh 1vw auto 1vw;
+    margin: 2vh 1vw 5vh 1vw;
     justify-content: center;
     align-items: center;
     text-align: center;

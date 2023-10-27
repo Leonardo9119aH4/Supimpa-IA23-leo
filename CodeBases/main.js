@@ -1,4 +1,5 @@
 async function main() {
+    //botão aleatório
     const scriptElement = document.currentScript;
     const scriptSrc = scriptElement.src;
     const dirJS = scriptSrc.substring(0, scriptSrc.lastIndexOf('/'));
@@ -22,6 +23,12 @@ async function main() {
         const nAleatorio = Math.floor(Math.random() * paginas.length);
         const pgAleatoria = paginas[nAleatorio];
         window.location.href = pgAleatoria;
+    })
+    //menu lateral
+    const MenuHamb = document.querySelector("menu"); 
+    const btMenuHamb = MenuHamb.querySelector("#btLHamburger"); 
+    btMenuHamb.addEventListener("click", LOpen =>{
+        MenuHamb.classList.toggle("open-menu");
     })
 }
 main();

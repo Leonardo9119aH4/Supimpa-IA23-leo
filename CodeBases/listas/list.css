@@ -1,6 +1,6 @@
 @font-face {
     font-family: "minecraft";
-    src: url(../fontes/1_MinecraftRegular1.otf);
+    src: url(../../globalAssets/fontes/1_MinecraftRegular1.otf);
 }
 body {
     font-family: "minecraft";
