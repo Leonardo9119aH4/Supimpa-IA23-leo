@@ -32,7 +32,11 @@ btMenuHamb.addEventListener("click", LOpen =>{
 const elQuiz = document.querySelector(".lquiz");
 const elWiki = document.querySelector(".lwiki");
 const modalWiki = document.querySelector("#WikiList");
+const elPopup = modalWiki.querySelector(".window")
 const Fechar = modalWiki.querySelector(".window button");
+const Invalido = new Audio("globalAssets/win7sino.wav");
+let isDragging = false;
+let offsetX, offsetY;
 
 elQuiz.addEventListener("click", eq =>{
     window.location.href = "./quiz/index.html";
@@ -48,3 +52,25 @@ document.addEventListener("keydown", esc =>{
         modalWiki.classList.remove("active");
     }
 })
+modalWiki.addEventListener("click", ev =>{
+    if(ev.target!=elPopup){
+        Invalido.play();
+    }
+})
+
+elPopup.addEventListener("mousedown", function(e) {
+    isDragging = true;
+    offsetX = e.clientX - elPopup.getBoundingClientRect().left;
+    offsetY = e.clientY - elPopup.getBoundingClientRect().top;
+    elPopup.style.cursor = "grabbing";
+});
+document.addEventListener("mouseup", function() {
+    isDragging = false;
+    elPopup.style.cursor = "grab";
+});
+document.addEventListener("mousemove", function(e) {
+    if (isDragging) {
+        elPopup.style.left = e.clientX - offsetX + "px";
+        elPopup.style.top = e.clientY - offsetY + "px";
+    }
+});

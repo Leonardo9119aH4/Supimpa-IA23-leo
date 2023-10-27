@@ -37,11 +37,18 @@ const elAlt = elQuiz.querySelector("#alternativas")
 const elEr = elQuiz.querySelector("#totalErros") //erros ou tentativas
 const elPo = elQuiz.querySelector("#pontos")
 const elHard = elQuiz.querySelector("#botao input") //botão do modo difícil
+const elCrono = elQuiz.querySelector("#tempo") //cronômetro
 const elPopup = document.querySelector("#popup") //popups
 const elGameOver = elPopup.querySelector("#gameOver") //popup de game over
 const elParabens = elPopup.querySelector("#parabens") //popup apos zerar o quiz
 const fechar = elPopup.querySelectorAll("button") //botões de fechar popup
 const fastBack = document.querySelector("#fastback") //aviso rápido de acerto ou erro
+
+let isDragging = false;
+let offsetX, offsetY;
+let seg = 0;
+let min = 0;
+let hora = 0;
 
 const hit = new Audio("../globalAssets/hit.mp3")
 const bsod = new Audio("../globalAssets/bsod.mp3")
@@ -58,7 +65,7 @@ async function main() {
   let Po = 0 //pontuação (modo fácil)
   let Tent = 0 //tentativas (modo difícil)
 
-  function Reset(){
+  function Reset(){ //inicio da parte das perguntas e pontuação
     nP = 0
     T_Er = 0
     Er = 1
@@ -124,9 +131,9 @@ async function main() {
         hit.play()
         fastBack.classList.add("erro")
         fastBack.innerHTML = "Você errou!"
-      setTimeout(() => {
-        fastBack.classList.remove("erro")
-      }, 1000)
+        setTimeout(() => {
+          fastBack.classList.remove("erro")
+        }, 1000)
       }
       if(elHard.checked){
         Reset()
@@ -134,6 +141,11 @@ async function main() {
         bsod.play()
         elPopup.classList.add("aberto")
         elGameOver.classList.add("aberto")
+        fastBack.classList.add("erro")
+        fastBack.innerHTML = "Você errou!"
+        setTimeout(() => {
+          fastBack.classList.remove("erro")
+        }, 1000)
       }
   }
   function Exibir(){
@@ -177,8 +189,9 @@ async function main() {
     Reset()
     Exibir()
     Perguntar(nP)
+    zeroCrono()
   })
-
+  //fim da parte das perguntas e pontuação e início da parte dos popus
   fechar.forEach(close=> {
     close.addEventListener("click", () =>{
       elPopup.classList.remove("aberto")
@@ -194,6 +207,42 @@ async function main() {
     }
   })
 
+  elPopup.addEventListener("mousedown", function(e) {
+    isDragging = true;
+    offsetX = e.clientX - elPopup.getBoundingClientRect().left;
+    offsetY = e.clientY - elPopup.getBoundingClientRect().top;
+    elPopup.style.cursor = "grabbing";
+  });
+  document.addEventListener("mouseup", function() {
+    isDragging = false;
+    elPopup.style.cursor = "grab";
+  });
+  document.addEventListener("mousemove", function(e) {
+    if (isDragging) {
+      elPopup.style.left = e.clientX - offsetX + "px";
+      elPopup.style.top = e.clientY - offsetY + "px";
+    }
+  });
+  //fim da parte dos popus e início da parte do cronômetro
+  function atualCrono() {
+    seg++;
+    if (seg === 60) {
+        seg = 0;
+        min++;
+        if (min === 60) {
+            min = 0;
+            hora++;
+        }
+    }
+    elCrono.innerHTML = (hora < 10 ? "0" : "") + hora + ":" + (min < 10 ? "0" : "") + min + ":" + (seg < 10 ? "0" : "") + seg;
+  }
+  function zeroCrono(){
+    seg = 0;
+    min = 0;
+    hora = 0;
+    elCrono.innerHTML = (hora < 10 ? "0" : "") + hora + ":" + (min < 10 ? "0" : "") + min + ":" + (seg < 10 ? "0" : "") + seg;
+  }
+  interval = setInterval(atualCrono, 1000);
   Perguntar(0)
 }
 main()

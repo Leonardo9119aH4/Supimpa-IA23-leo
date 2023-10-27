@@ -35,15 +35,19 @@ header {
     right: 1.25vmin;
     appearance: none;
     background-color: rgba(255, 0, 0, 0.5);
+    background-image: url(globalAssets/Aero_X.png);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
-    border-radius: 1.5%;
+    border-radius: 5%;
     z-index: 3;
     width: 5vmin;
+    height: 2vh;
 }
 #WikiList .window button:hover{
     cursor: pointer;
     background-color: rgb(255, 64, 64);
+    box-shadow: 0 0 10px 5px #f54040;
 }
 #WikiList.active{
     visibility: visible;
@@ -56,7 +60,7 @@ header {
     opacity: 1;
     height: 85vmin;
     width: 73vmin;
-    background-color: rgba(29, 144, 207, 0.5);
+    background-color: rgba(94, 164, 230, 0.701);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 1.5%;
