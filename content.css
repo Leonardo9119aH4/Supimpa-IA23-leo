@@ -6,6 +6,7 @@ body{
     background-image: url(globalAssets/terra.jpeg);
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 header {
     margin: 12vh 2vw auto 2vw;
@@ -33,7 +34,7 @@ header {
     justify-self: right;
     right: 1.25vmin;
     appearance: none;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.5);
     color: white;
     border: none;
     border-radius: 1.5%;
