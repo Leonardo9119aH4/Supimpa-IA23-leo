@@ -59,7 +59,7 @@ body{
     margin-top: 0.4vh;
 }
 
-#popup #gameOver, #popup #parabens{
+#popup #gameOver, #popup #parabens, #popup #comeco{
     position: absolute;
     background-color: white;
     width: 38vmin;
@@ -70,21 +70,23 @@ body{
     opacity: 0;
     transition: 0.5s;
 }
-#popup #gameOver.aberto, #popup #parabens.aberto{
+#popup #gameOver.aberto, #popup #parabens.aberto, #popup #comeco.aberto{
     visibility: visible;
     opacity: 1;
 }
-#popup #gameOver .texto, #popup #parabens .texto{
+#popup #gameOver .texto, #popup #parabens .texto, #popup #comeco .texto{
     display: flex;
     text-align: center;
+    align-items: center;
 }
-#popup #gameOver .texto>p, #popup #parabens .texto>p{
+#popup #gameOver .texto>p, #popup #parabens .texto>p, #popup #comeco .texto>p,
+#popup #gameOver .texto>h1, #popup #parabens .texto>h1, #popup #comeco .texto>h1{
     margin-left: auto;
     margin-right: auto;
 }
-#popup #gameOver button, #popup #parabens button{
+#popup #gameOver button, #popup #parabens button, #popup #comeco button{
     float: right;
-    margin-right: 1vmin;
+    margin: auto 1vmin 1vmin auto;
     background-image: url(../globalAssets/aero_button.png);
     border: none;
     background-size: cover;
@@ -93,10 +95,10 @@ body{
     width: 5.4rem;
     cursor: pointer;
 }
-#popup #gameOver button:hover, #popup #parabens button:hover{
+#popup #gameOver button:hover, #popup #parabens button:hover, #popup #comeco button:hover{
     background-image: url(../globalAssets/aero_button_hover.png);
 }
-#popup #gameOver button:active, #popup #parabens button:active{
+#popup #gameOver button:active, #popup #parabens button:active, #popup #comeco button:active{
     background-image: url(../globalAssets/aero_button_click.png);
 }
 

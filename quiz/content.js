@@ -39,6 +39,7 @@ const elPo = elQuiz.querySelector("#pontos")
 const elHard = elQuiz.querySelector("#botao input") //botão do modo difícil
 const elCrono = elQuiz.querySelector("#tempo") //cronômetro
 const elPopup = document.querySelector("#popup") //popups
+const elComeco = elPopup.querySelector("#comeco") //popup inicial
 const elGameOver = elPopup.querySelector("#gameOver") //popup de game over
 const elParabens = elPopup.querySelector("#parabens") //popup apos zerar o quiz
 const fechar = elPopup.querySelectorAll("button") //botões de fechar popup
@@ -49,11 +50,15 @@ let offsetX, offsetY;
 let seg = 0;
 let min = 0;
 let hora = 0;
+let emJogo = false;
 
 const hit = new Audio("../globalAssets/hit.mp3")
 const bsod = new Audio("../globalAssets/bsod.mp3")
 const xpOrb = new Audio("../globalAssets/xp_orb.mp3")
 const conquista = new Audio("../globalAssets/rare_achievement.mp3")
+
+elPopup.classList.add("aberto")
+elComeco.classList.add("aberto")
 
 async function main() {
   const request = await fetch("quiz.json")
@@ -197,6 +202,7 @@ async function main() {
       elPopup.classList.remove("aberto")
       elGameOver.classList.remove("aberto")
       elParabens.classList.remove("aberto")
+      elComeco.classList.remove("aberto")
     })
   })
   document.addEventListener("keydown", esc =>{
@@ -204,6 +210,7 @@ async function main() {
       elPopup.classList.remove("aberto")
       elGameOver.classList.remove("aberto")
       elParabens.classList.remove("aberto")
+      elComeco.classList.remove("aberto")
     }
   })
 

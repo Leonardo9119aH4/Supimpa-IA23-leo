@@ -5,6 +5,8 @@ body {
     background-image: url(../../globalAssets/minecraft.png);
     display: flex;
     flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 div#segredo{ 
     position: fixed;
@@ -22,22 +24,31 @@ div#segredo{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s;
+    transition: opacity 0.5s;
 }
 div#segredo.aberto{
     opacity: 1;
     visibility: visible;
 }
-div#segredo>button{
+div#segredo>button#X{
+    z-index: 3;
     position: absolute;
-    right: 0;
+    justify-self: right;
+    right:0.75vmin;
+    align-self: self-start;
+    width: 5vmin;
     height: 2vmin;
-    background-color: red;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0.5);
+    background-image: url(../../globalAssets/Aero_X.png);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
 }
-div#segredo>button:hover{
+div#segredo>button#X:hover{
+    cursor: pointer;
     background-color: rgb(255, 64, 64);
+    box-shadow: 0 0 10px 5px #f54040;
 }
 div#content{
     background-color: white;
@@ -48,12 +59,15 @@ div#content{
     font-size: 2rem;
 }
 div#content button{
-    margin-top: 20%;
+    float: right;
+    margin: auto 1vmin 1vmin auto;
     background-image: url(../../globalAssets/aero_button.png);
     border: none;
     background-size: cover;
     background-repeat: no-repeat;
-    font-size: 1.5rem;
+    height: 23px;
+    width: 5.4rem;
+    cursor: pointer;
 }
 div#content button:hover{
     background-image: url(../../globalAssets/aero_button_hover.png);

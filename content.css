@@ -41,8 +41,8 @@ header {
     border: none;
     border-radius: 5%;
     z-index: 3;
-    width: 5vmin;
-    height: 2vh;
+    width: 48px;
+    height: 18px;
 }
 #WikiList .window button:hover{
     cursor: pointer;
@@ -117,7 +117,6 @@ main div.sobre {
     text-align: justify;
     padding-left: 1vw;
     padding-right: 1vw;
-    background-color: white;
     margin: auto 0.8vw auto 0.8vw;
 }
 main span.risco{
